@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>输入参数</h3>
+<p>田面水养分浓度：  <label th:text="${{inputParam.nutrientConcentration}}"/></p>
+<p>降水时间：   <label th:text="${{inputParam.precipitationTime}}"></label></p>
+<p>降水强度：   <label  th:text="${{inputParam.precipitationIntensity}}"></label></p>
+<p>雨滴速度：   <label  th:text="${{inputParam.raindropsSpeed}}"></label></p>
+<p>土壤渗透系数： <label  th:text="${{inputParam.soilPermeabilityCoefficient}}"></label></p>
+<p>田埂高度： <label th:text="${{inputParam.ridgeHeight}}"></label></p>
+<h3>计算结果</h3>
+<p>总氮(磷)径流流失速率(kg/ha/min)： <label th:text="${{result}}"></label>
+</body>
+</html>

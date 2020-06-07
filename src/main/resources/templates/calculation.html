@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h3>请输入参数：</h3>
+  <form action="#" th:action="@{/calculate}" th:object="${inputParam}" method="post">
+      <p>田面水养分浓度: <input type="text" th:field="*{nutrientConcentration}" /></p>
+      <p>降水时间: <input type="text" th:field="*{precipitationTime}" /></p>
+      <p><input type="submit" value="计算" /> <input type="reset" value="重置" /></p>
+  </form>
+</body>
+</html>
