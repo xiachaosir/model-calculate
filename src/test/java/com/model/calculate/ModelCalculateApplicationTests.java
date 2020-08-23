@@ -20,13 +20,11 @@ class ModelCalculateApplicationTests {
     public void calculate() {
         InputParam inputParam = new InputParam();
         inputParam.setCt("1.3242");
-        inputParam.setHs("1.44242");
         inputParam.setD0("0.5412");
         inputParam.setK("1.522");
         inputParam.setR("0.433");
         inputParam.setHt("1.54242");
         inputParam.setC0("1.443");
-        inputParam.setCp("0.2324");
         inputParam.setS("1.64242");
         inputParam.setType("0.24242");
         System.out.println(calculateService.calculate(inputParam));

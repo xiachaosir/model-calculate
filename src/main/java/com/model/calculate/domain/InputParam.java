@@ -32,10 +32,6 @@ public class InputParam implements Serializable {
     private String ht;
     private BigDecimal htDec;
 
-    //hs为实际测量的水稻根系深度。
-    private String hs;
-    private BigDecimal hsDec;
-
     //田面水浓度
     private String ct;
     private BigDecimal ctDec;
@@ -44,24 +40,36 @@ public class InputParam implements Serializable {
     private String c0;
     private BigDecimal c0Dec;
 
-    //田面水养分浓度
-    private String cp;
-    private BigDecimal cpDec;
+    //输入参数之降水中养分浓度
+    private String cr;
+    private BigDecimal crDec;
 
-    public String getCp() {
-        return cp;
+    //输入参数之时间步长
+    private String t;
+    private BigDecimal tDec;
+
+    public String getT() {
+        return t;
     }
 
-    public void setCp(String cp) {
-        this.cp = cp;
+    public void setT(String t) {
+        this.t = t;
     }
 
-    public BigDecimal getCpDec() {
-        return cpDec;
+    public String getCr() {
+        return cr;
     }
 
-    public void setCpDec(BigDecimal cpDec) {
-        this.cpDec = cpDec;
+    public void setCr(String cr) {
+        this.cr = cr;
+    }
+
+    public BigDecimal getCrDec() {
+        return crDec;
+    }
+
+    public void setCrDec(BigDecimal crDec) {
+        this.crDec = crDec;
     }
 
     public String getC0() {
@@ -94,22 +102,6 @@ public class InputParam implements Serializable {
 
     public void setCtDec(BigDecimal ctDec) {
         this.ctDec = ctDec;
-    }
-
-    public String getHs() {
-        return hs;
-    }
-
-    public void setHs(String hs) {
-        this.hs = hs;
-    }
-
-    public BigDecimal getHsDec() {
-        return hsDec;
-    }
-
-    public void setHsDec(BigDecimal hsDec) {
-        this.hsDec = hsDec;
     }
 
     public String getK() {

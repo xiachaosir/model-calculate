@@ -42,14 +42,15 @@ public class CalculateServiceImpl implements CalculateService {
         inputParam.setHtDec(new BigDecimal(inputParam.getHt()));
         inputParam.setrDec(new BigDecimal(inputParam.getR()));
         inputParam.setsDec(new BigDecimal(inputParam.getS()));
-        inputParam.setHsDec(new BigDecimal(inputParam.getHs()));
         inputParam.setCtDec(new BigDecimal(inputParam.getCt()));
         inputParam.setC0Dec(new BigDecimal(inputParam.getC0()));
-        inputParam.setCpDec(new BigDecimal(inputParam.getCp()));
 
         BigDecimal wt = new BigDecimal("1");
+
+        //hs为测量的水稻根系深度，取值为60cm
+        BigDecimal hs = new BigDecimal("60");
         BigDecimal u = BigDecimalUtil.divide(
-                inputParam.getrDec().subtract((wt.multiply(BigDecimalUtil.divide(inputParam.getD0Dec(), inputParam.getHsDec())))),
+                inputParam.getrDec().subtract((wt.multiply(BigDecimalUtil.divide(inputParam.getD0Dec(), hs)))),
                 wt);
 
         BigDecimal t = BigDecimal.ONE;
@@ -87,11 +88,10 @@ public class CalculateServiceImpl implements CalculateService {
         BigDecimal etr = k4.multiply(en).multiply((BigDecimal.ONE.subtract(BigDecimalUtil.pow(e, tmp1))));
 
         BigDecimal k5 = BigDecimal.ONE;
-        BigDecimal cp = BigDecimal.ONE;
         BigDecimal cr = BigDecimal.ONE;
         BigDecimal y = BigDecimal.ONE;
         BigDecimal tmp3 = BigDecimalUtil.divide(y.multiply(v), inputParam.getHtDec()).multiply(new BigDecimal("-1"));
-        BigDecimal tmp5 = (cp.add(cr)).multiply(BigDecimal.ONE.subtract(BigDecimalUtil.pow(e, tmp3))).multiply(v);
+        BigDecimal tmp5 = (inputParam.getCtDec().add(cr)).multiply(BigDecimal.ONE.subtract(BigDecimalUtil.pow(e, tmp3))).multiply(v);
         BigDecimal er = k5.multiply(tmp5).multiply(BigDecimalUtil.divide(new BigDecimal("0.1"), t)).add(etr);
 
         return er.stripTrailingZeros().toPlainString();
