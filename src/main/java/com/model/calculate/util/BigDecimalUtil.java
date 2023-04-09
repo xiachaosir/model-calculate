@@ -181,7 +181,7 @@ public class BigDecimalUtil {
      * @return BigDecimal
      */
     public static BigDecimal divide(BigDecimal value1, BigDecimal value2) {
-        return value1.divide(value2, 5, BigDecimal.ROUND_HALF_UP);
+        return value1.divide(value2, 8, BigDecimal.ROUND_HALF_UP);
     }
 
     public static void main(String[] args) {

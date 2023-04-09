@@ -23,7 +23,7 @@ public class SysMenuServiceImpl implements SysMenuService {
         menuVO.setId(2L);
         menuVO.setPid(1L);
         menuVO.setHref("http://www.baidu.com");
-        menuVO.setTitle("模型计算");
+        menuVO.setTitle("场次内水土界面释放输移及流失估算");
         menuVO.setIcon("");
         menuVO.setTarget("");
         menuInfo.add(menuVO);

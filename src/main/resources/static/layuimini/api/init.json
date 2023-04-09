@@ -8,7 +8,7 @@
     "href": "/page/welcome"
   },
   "logoInfo": {
-    "title": "模型计算系统",
+    "title": "稻田径流流失过程模拟系统",
     "image": "../images/logo.png",
     "href": ""
   },
@@ -18,15 +18,9 @@
       "icon": "fa fa-address-book",
       "child": [
         {
-          "title": "模型计算",
+          "title":"释放输移及流失估算",
           "href": "/page/setting",
           "icon": "fa fa-window-maximize",
-          "target": "_self"
-        },
-        {
-          "title": "系统设置",
-          "href": "page/setting",
-          "icon": "fa fa-gears",
           "target": "_self"
         }
       ]

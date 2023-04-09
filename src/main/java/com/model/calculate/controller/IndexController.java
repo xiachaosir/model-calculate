@@ -11,7 +11,7 @@ public class IndexController {
 
     @GetMapping("/welcome")
     public String welcome() {
-        return "page/welcome-1.html";
+        return "page/welcome-2.html";
     }
 
     @GetMapping("/setting")

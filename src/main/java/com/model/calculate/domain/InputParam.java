@@ -16,7 +16,7 @@ public class InputParam implements Serializable {
     private String k;
     private BigDecimal kDec;
 
-    //初始田面水位高度
+    //初始田面水位
     private String d0;
     private BigDecimal d0Dec;
 
@@ -24,7 +24,7 @@ public class InputParam implements Serializable {
     private String s;
     private BigDecimal sDec;
 
-    //降雨强度
+    //降水强度
     private String r;
     private BigDecimal rDec;
 
@@ -32,21 +32,41 @@ public class InputParam implements Serializable {
     private String ht;
     private BigDecimal htDec;
 
-    //田面水浓度
+    //径流水养分浓度
     private String ct;
     private BigDecimal ctDec;
 
-    //田面水初始浓度
+    //初始田面水养分浓度
     private String c0;
     private BigDecimal c0Dec;
 
-    //输入参数之降水中养分浓度
+    //降水养分浓度
     private String cr;
     private BigDecimal crDec;
 
-    //输入参数之时间步长
+    //时间步长
     private String t;
     private BigDecimal tDec;
+
+    //雨滴降落速度
+    private String vdrop;
+    private BigDecimal vdropDec;
+
+    public String getVdrop() {
+        return vdrop;
+    }
+
+    public void setVdrop(String vdrop) {
+        this.vdrop = vdrop;
+    }
+
+    public BigDecimal getVdropDec() {
+        return vdropDec;
+    }
+
+    public void setVdropDec(BigDecimal vdropDec) {
+        this.vdropDec = vdropDec;
+    }
 
     public String getT() {
         return t;
@@ -190,5 +210,13 @@ public class InputParam implements Serializable {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public BigDecimal gettDec() {
+        return tDec;
+    }
+
+    public void settDec(BigDecimal tDec) {
+        this.tDec = tDec;
     }
 }
